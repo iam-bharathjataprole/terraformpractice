@@ -1,8 +1,9 @@
 provider "aws" {
-  region = "us-east-1"
+    region = "us-east-1"  # Set your desired AWS region
 }
-resource "ec2_instance" "demoterraform" {
-  ami = "ami-04a81a99f5ec58529"
-  instance_type ="t2_micro"
+
+resource "aws_instance" "example" {
+    ami           = "ami-0c55b159cbfafe1f0"  # Specify an appropriate AMI ID
+    instance_type = "t2.micro"
 }
 
